@@ -22,6 +22,13 @@ app.get('/api/items', (req, res)=>{
   res.send('Items Resourse!')
 })
 
+app.put('/api/people/:id', (req, res)=>{
+  const {id} = req.params
+  const {name} = req.body
+  console.log(id, name);
+  res.send('Put Method Hit!')
+})
+
 app.listen(5000, ()=>{
   console.log('Server is listening on port 5000...');
 })
